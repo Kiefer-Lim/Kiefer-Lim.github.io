@@ -150,56 +150,73 @@
 </div>
 </section>
 
-<section style="margin-top:1rem">
-<div class="sample wrap">
-  <p>0. Useful Integrals</p>
-<div class="dropdown">
-  <div class="dropdown-trigger">(a) \( \int_0^\pi \frac{a+b\cos(x) dx = \frac{\pi}{\sqrt{a^2-b^2 }} ; a > |b|\) </div>
-
-  <div class="dropdown-menu">
-    <div> \( = \int_0^\infty \frac{1}{a+b(\frac{1-t^2}{1+t^2})} \cdot \frac{2}{1+t^2} dt \) </div>
-    <div> \( = \int_0^\infty \frac{2}{a(1+t^2) + b(1-t^2)} dt\) </div>
-    <div> \( = \int_0^\infty \frac{2}{(a-b)t^2 + (a+b)} dt \) </div>
-    <div> \( = \frac{2}{a-b} \sqrt{\frac{a-b}{a+b}} [ \arctan(x \sqrt{\frac{a-b}{a+b}}) ] 
-      _0^\infty\) </div>
-    <div> \( = \frac{\pi}{\sqrt{a^2-b^2}}\) </div>
+  <section style="margin-top:1rem">
+  <div class="sample wrap">
+    <p>0. Useful Integrals</p>
+  <div class="dropdown">
+    <div class="dropdown-trigger">(a) \( \int_0^\pi \frac{a+b\cos(x) dx = \frac{\pi}{\sqrt{a^2-b^2 }} ; a > |b|\) </div>
+  
+    <div class="dropdown-menu">
+      <div> \( = \int_0^\infty \frac{1}{a+b(\frac{1-t^2}{1+t^2})} \cdot \frac{2}{1+t^2} dt \) </div>
+      <div> \( = \int_0^\infty \frac{2}{a(1+t^2) + b(1-t^2)} dt\) </div>
+      <div> \( = \int_0^\infty \frac{2}{(a-b)t^2 + (a+b)} dt \) </div>
+      <div> \( = \frac{2}{a-b} \sqrt{\frac{a-b}{a+b}} [ \arctan(x \sqrt{\frac{a-b}{a+b}}) ] 
+        _0^\infty\) </div>
+      <div> \( = \frac{\pi}{\sqrt{a^2-b^2}}\) </div>
+    </div>
   </div>
-</div>
+    <p></p>
+  <div class="dropdown">
+    <div class="dropdown-trigger">(b) \( \int_0^\infty \frac{\cos(ax)}{x^2+b^2} dx = \frac{\pi}{2b}e^{-ab} \) </div>
+  
+    <div class="dropdown-menu">
+      <div> \( = \int_0^\infty \frac{1}{a+b(\frac{1-t^2}{1+t^2})} \cdot \frac{2}{1+t^2} dt \) </div>
+      <div> \( = \int_0^\infty \frac{2}{a(1+t^2) + b(1-t^2)} dt\) </div>
+      <div> \( = \int_0^\infty \frac{2}{(a-b)t^2 + (a+b)} dt \) </div>
+      <div> \( = \frac{2}{a-b} \sqrt{\frac{a-b}{a+b}} [ \arctan(x \sqrt{\frac{a-b}{a+b}}) ] 
+        _0^\infty\) </div>
+      <div> \( = \frac{\pi}{\sqrt{a^2-b^2}}\) </div>
+    </div>
+  </div>
   <p></p>
-<div class="dropdown">
-  <div class="dropdown-trigger">(b) \( \int_0^\infty \frac{\cos(ax)}{x^2+b^2} dx = \frac{\pi}{2b}e^{-ab} \) </div>
-
-  <div class="dropdown-menu">
-    <div> \( = \int_0^\infty \frac{1}{a+b(\frac{1-t^2}{1+t^2})} \cdot \frac{2}{1+t^2} dt \) </div>
-    <div> \( = \int_0^\infty \frac{2}{a(1+t^2) + b(1-t^2)} dt\) </div>
-    <div> \( = \int_0^\infty \frac{2}{(a-b)t^2 + (a+b)} dt \) </div>
-    <div> \( = \frac{2}{a-b} \sqrt{\frac{a-b}{a+b}} [ \arctan(x \sqrt{\frac{a-b}{a+b}}) ] 
-      _0^\infty\) </div>
-    <div> \( = \frac{\pi}{\sqrt{a^2-b^2}}\) </div>
-  </div>
-</div>
-<p></p>
-<div class="dropdown">
-  <div class="dropdown-trigger">(c) \( \int_0^\infty e^{-sx} \cos(bx) dx = \frac{b}{b^2+s^2} ; \int_0^\infty e^{-sx} \sin(bx) dx = \frac{s}{b^2+s^2} \) </div>
-
-  <div class="dropdown-menu">
-    <div> \( = \int_0^\infty e^{-sx + ibx} \) </div>
-    <div> \( = \int_0^\infty e^{(-s + ib)x} \) </div>
-    <div> \( = [\frac{1}{-s+ib} e^{(-s+ib)x}]_0^\infty \) </div>
-    <div> \( \frac{1}{s-ib} \) </div>
-    <div> \( \frac{s+ib}{s^2+b^2} \) </div>
-  </div>
-</div>
+  <div class="dropdown">
+    <div class="dropdown-trigger">(c) \( \int_0^\infty e^{-sx} \cos(bx) dx = \frac{b}{b^2+s^2} ; \int_0^\infty e^{-sx} \sin(bx) dx = \frac{s}{b^2+s^2} \) </div>
   
-</div>
-
-</section>
+    <div class="dropdown-menu">
+      <div> \( = \int_0^\infty e^{-sx + ibx} \) </div>
+      <div> \( = \int_0^\infty e^{(-s + ib)x} \) </div>
+      <div> \( = [\frac{1}{-s+ib} e^{(-s+ib)x}]_0^\infty \) </div>
+      <div> \( \frac{1}{s-ib} \) </div>
+      <div> \( \frac{s+ib}{s^2+b^2} \) </div>
+    </div>
+  </div>
+    
+  </div>
   
-</main>
+  </section>
 
-<footer>
-<div class="wrap">Tip: This is a single-file static HTML page. You can save it and open it locally in your browser.</div>
-</footer>
+  <section id="Integral_2" style="margin-top:1rem">
+    <p>2. Gamma Functions, Beta Functions</p>
+    <div> $$ \Gamma(x) := \int_0^\infty t^{x-1} e^{-t} dt \ (x>0) $$ </div>
+    <div class="dropdown">
+      <div class="dropdown-trigger"> Click for Properties of Gamma Function </div>
+      <div class="dropdown-menu">
+        <div> \( \Gamma(x+1) = x \Gamma(x) \) </div>
+        <div> \( \Gamma(n+1) = n! \) for \(n \in \mathcal{Z}^+ \) </div>
+        <div> \( \Gamma(1) = 0! = 1 \) </div>
+        <div> \( \Gamma(\frac{1}{2}) = \sqrt{\pi} \) </div>
+        <div> \( \Gamma(x)\Gamma(1-x) = \frac{\pi}{\sin(\pi x)} \) </div>
+      </div>
+    </div>
+    <p></p>
+    <div> \( \int_{-\infty}^\infty e^{-\alpha x^2} dx = \frac{\sqrt{\pi}}{\alpha} \) </div>
+  </section>
+  
+  </main>
+
+  <footer>
+  <div class="wrap">Tip: This is a single-file static HTML page. You can save it and open it locally in your browser.</div>
+  </footer>
 
 </body>
         
