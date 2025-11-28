@@ -161,7 +161,7 @@
   <div class="dropdown-trigger">(b) \( \int_0^1 \frac{\ln(x)}{x^2+1} dx = -G \) </div>
 
   <div class="dropdown-menu">
-    <div> \( = [ \ln(x) \cdot \arctan(x) ]_0^1 - \int_0^ \frac{\arctan(x)}{x} dx \) </div>
+    <div> \( = [ \ln(x) \cdot \arctan(x) ]_0^1 - \int_0^1 \frac{\arctan(x)}{x} dx \) </div>
     <div> \( = - G\) </div>
   </div>
 </div>
@@ -182,19 +182,20 @@
 <section style="margin-top:1rem">
 <div class="sample wrap">
   <p>0. Useful Integrals</p>
-</div>
 <div class="dropdown">
   <div class="dropdown-trigger">(a) \( \int_0^\pi \frac{a+b\cos(x) dx = \frac{\pi}{\sqrt{a^2-b^2 }} \) ; \(a > |b|\) </div>
 
   <div class="dropdown-menu">
     <div> \( = \int_0^\infty \frac{1}{a+b(\frac{1-t^2}{1+t^2})} \cdot \frac{2}{1+t^2} dt \) </div>
     <div> \( = \int_0^\infty \frac{2}{a(1+t^2) + b(1-t^2)} dt\) </div>
-    <div> \( = \int_0^\infty \frac{2}{(a-b)t^2 - (a+b)} dt \) </div>
+    <div> \( = \int_0^\infty \frac{2}{(a-b)t^2 + (a+b)} dt \) </div>
     <div> \( = \frac{2}{a-b} \sqrt{\frac{a-b}{a+b}} [ \arctan(x \sqrt{\frac{a-b}{a+b}}) ] 
       _0^\infty\) </div>
-    <div> \( = \frac{\pi}{\sqrt{a^2-b^2 }}\) </div>
+    <div> \( = \frac{\pi}{\sqrt{a^2-b^2}}\) </div>
   </div>
 </div>
+</div>
+
 </section>
   
 </main>
