@@ -13,16 +13,29 @@
 
 <!-- Auto-render extension -->
 <script>
-  // Wait for DOM and KaTeX scripts to load
-  document.addEventListener("DOMContentLoaded", () => {
-    renderMathInElement(document.body, {
-      delimiters: [
-        { left: "\\(", right: "\\)", display: false }, // inline
-        { left: "$$", right: "$$", display: true }     // display
-      ],
-      throwOnError: false
-    });
-  });
+document.addEventListener("click", (e) => {
+  const dropdown = e.target.closest(".dropdown");
+
+  // Close all open dropdowns
+  document.querySelectorAll(".dropdown.open")
+    .forEach(d => d.classList.remove("open"));
+
+  // Toggle clicked dropdown
+  if (dropdown) {
+    dropdown.classList.toggle("open");
+
+    // Re-render math inside newly opened menu
+    if (dropdown.classList.contains("open")) {
+      renderMathInElement(dropdown, {
+        delimiters: [
+          { left: "\\(", right: "\\)", display: false },
+          { left: "$$", right: "$$", display: true }
+        ],
+        throwOnError: false
+      });
+    }
+  }
+});
 </script>
   
 <title>Integrals</title>
@@ -123,15 +136,15 @@
 <div class="sample wrap">
   <p>1. Catalan's Constant</p>
   <p>$$ G := \frac{1}{1^2} - \frac{1}{3^2} + \frac{1}{5^2} - \frac{1}{7^2} + \frac{1}{9^2} - \dots $$</p>
-  <p>(a) \\( \int_0^1 \frac{\arctan(x)}{x} \dd x = G \\)</p>
-  <p>(b) \( \int_0^1 \frac{\ln(x)}{x^2+1} \dd x = G \)</p>
-  <p>(c) \( \int_0^1 \frac{ln(x+1)}{x^2+1} \dd x = \frac{\pi}{8} \ln(2) \) </p>
+  <p>(a) \\( \int_0^1 \frac{\arctan(x)}{x} dx = G \\)</p>
+  <p>(b) \( \int_0^1 \frac{\ln(x)}{x^2+1} dx = G \)</p>
+  <p>(c) \( \int_0^1 \frac{ln(x+1)}{x^2+1} dx = \frac{\pi}{8} \ln(2) \) </p>
 
 <div class="dropdown">
-  <div class="dropdown-trigger">(a) \( \int_0^1 \frac{\arctan(x)}{x} \dd x = G \)</div>
+  <div class="dropdown-trigger">(a) \( \int_0^1 \frac{\arctan(x)}{x} dx = G \)</div>
 
   <div class="dropdown-menu">
-    <div> \( \int_0^1 \frac{\arctan(x)}{x} \dd x = \)</div>
+    <div> \( \int_0^1 \frac{\arctan(x)}{x} dx = \)</div>
     <div> \( \int_0^1 \frac{1}{x} \sum_{n=0}^\infty (-1)^n \cdot \frac{x^{2n+1}}{2n+1} \dd x = \sum_{n=0}^\infty (-1)^n \cdot \frac{1}{(2n+1)^2} = G \)</div>
     <div>Item 3</div>
   </div>
