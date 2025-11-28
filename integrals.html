@@ -9,15 +9,20 @@
 
 <!-- KaTeX JS -->
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
 
 <!-- Auto-render extension -->
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
-        onload="renderMathInElement(document.body, {
-            delimiters: [
-                {left: '$$', right: '$$', display: true},
-                {left: '\\(', right: '\\)', display: false}
-            ]
-        });">
+<script>
+  // Wait for DOM and KaTeX scripts to load
+  document.addEventListener("DOMContentLoaded", () => {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "\\(", right: "\\)", display: false }, // inline
+        { left: "$$", right: "$$", display: true }     // display
+      ],
+      throwOnError: false
+    });
+  });
 </script>
   
 <title>Integrals</title>
