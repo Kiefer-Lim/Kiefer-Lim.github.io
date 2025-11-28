@@ -13,29 +13,40 @@
 
 <!-- Auto-render extension -->
 <script>
-document.addEventListener("click", (e) => {
-  const dropdown = e.target.closest(".dropdown");
+  document.addEventListener("DOMContentLoaded", () => {
+    // Render all existing math in the page
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "\\(", right: "\\)", display: false }, // inline
+        { left: "$$", right: "$$", display: true }     // display
+      ],
+      throwOnError: false
+    });
+  });
 
-  // Close all open dropdowns
-  document.querySelectorAll(".dropdown.open")
-    .forEach(d => d.classList.remove("open"));
+  // Dropdown click handler
+  document.addEventListener("click", (e) => {
+    const dropdown = e.target.closest(".dropdown");
 
-  // Toggle clicked dropdown
-  if (dropdown) {
-    dropdown.classList.toggle("open");
+    // Close all open dropdowns
+    document.querySelectorAll(".dropdown.open")
+      .forEach(d => d.classList.remove("open"));
 
-    // Re-render math inside newly opened menu
-    if (dropdown.classList.contains("open")) {
-      renderMathInElement(dropdown, {
-        delimiters: [
-          { left: "\\(", right: "\\)", display: false },
-          { left: "$$", right: "$$", display: true }
-        ],
-        throwOnError: false
-      });
+    if (dropdown) {
+      dropdown.classList.toggle("open");
+
+      // Re-render math inside newly opened dropdown
+      if (dropdown.classList.contains("open")) {
+        renderMathInElement(dropdown, {
+          delimiters: [
+            { left: "\\(", right: "\\)", display: false },
+            { left: "$$", right: "$$", display: true }
+          ],
+          throwOnError: false
+        });
+      }
     }
-  }
-});
+  });
 </script>
   
 <title>Integrals</title>
