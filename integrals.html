@@ -168,7 +168,7 @@
   <p>  \( = - \int_1^\infty \frac{\ln(x)}{x^2+1} dx \) </p>
   <p> </p>
 <div class="dropdown">
-  <div class="dropdown-trigger">(c) \( \int_0^1 \frac{ln(x+1)}{x^2+1} dx = \frac{\pi}{8} \ln(2) \) </div>
+  <div class="dropdown-trigger">(c) \( \int_0^1 \frac{\ln(x+1)}{x^2+1} dx = \frac{\pi}{8} \ln(2) \) </div>
 
   <div class="dropdown-menu">
     <div> </div>
@@ -194,6 +194,19 @@
     <div> \( = \frac{\pi}{\sqrt{a^2-b^2}}\) </div>
   </div>
 </div>
+<div class="dropdown">
+  <div class="dropdown-trigger">(b) \( \int_0^\infty \frac{\cos(ax)}{x^2+b^2} dx = \frac{\pi}{2b}e^{-ab} \) </div>
+
+  <div class="dropdown-menu">
+    <div> \( = \int_0^\infty \frac{1}{a+b(\frac{1-t^2}{1+t^2})} \cdot \frac{2}{1+t^2} dt \) </div>
+    <div> \( = \int_0^\infty \frac{2}{a(1+t^2) + b(1-t^2)} dt\) </div>
+    <div> \( = \int_0^\infty \frac{2}{(a-b)t^2 + (a+b)} dt \) </div>
+    <div> \( = \frac{2}{a-b} \sqrt{\frac{a-b}{a+b}} [ \arctan(x \sqrt{\frac{a-b}{a+b}}) ] 
+      _0^\infty\) </div>
+    <div> \( = \frac{\pi}{\sqrt{a^2-b^2}}\) </div>
+  </div>
+</div>
+  
 </div>
 
 </section>
