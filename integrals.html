@@ -67,4 +67,75 @@ $$
 <footer>
 <div class="wrap">Tip: This is a single-file static HTML page. You can save it and open it locally in your browser.</div>
 </footer>
+
+<!-- KaTeX and auto-render (from CDN) -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+<script>
+// Wait for DOM and KaTeX to load
+function safeRender(text) {
+const preview = document.getElementById('preview');
+// place source as text (so raw latex appears before rendering)
+preview.textContent = text;
+try {
+renderMathInElement(preview, {
+// support both inline and display delimiters
+delimiters: [
+{left: '$$', right: '$$', display: true},
+{left: '\\(', right: '\\)', display: false}
+],
+throwOnError: false,
+// macros can be added here if you need custom commands
+// macros: {\\RR: '\\mathbb{R}'}
+});
+} catch (err) {
+// In case of fatal errors, show a friendly message
+preview.innerHTML = '<div style="color:#b91c1c">Rendering error: ' + String(err) + '</div>';
+}
+}
+
+
+document.addEventListener('DOMContentLoaded', function(){
+const src = document.getElementById('src');
+const preview = document.getElementById('preview');
+
+
+// initialize with a short example
+const starter = 'Euler:\\n\\n\\(e^{i\\pi} + 1 = 0\\)\\n\\nDisplay example:\\n$$\\sum_{n=1}^{\\infty} \n\\frac{1}{n^2} = \\frac{\\pi^2}{6}$$';
+src.value = starter;
+safeRender(src.value);
+
+
+// live preview with a small debounce
+let timeout = null;
+src.addEventListener('input', function(){
+clearTimeout(timeout);
+timeout = setTimeout(()=> safeRender(src.value), 200);
+});
+
+
+document.getElementById('insertSample').addEventListener('click', function(){
+src.value = 'Quadratic formula: \\n\\(x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\\)\\n\\nDisplay integral:\\n$$\\int_0^1 x^2 \\; dx = \\frac{1}{3}$$';
+safeRender(src.value);
+src.focus();
+});
+
+
+document.getElementById('clear').addEventListener('click', function(){
+src.value = '';
+safeRender('');
+src.focus();
+});
+
+
+document.getElementById('copySource').addEventListener('click', async function(){
+try {
+await navigator.clipboard.writeText(src.value);
+this.textContent = 'Copied!';
+setTimeout(()=> this.textContent = 'Copy source', 1200);
+} catch (e) {
+alert('Could not copy to clipboard.');
+}
+});
+</html>
 </html>
