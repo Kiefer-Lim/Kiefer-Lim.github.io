@@ -1,11 +1,70 @@
-<html>
-  <head>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  </head>
-  <body>
-    Interesting Integrals:
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>LaTeX Live Preview — Simple</title>
+<!-- KaTeX CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<style>
+:root{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{margin:0;background:#f7fafc;color:#0f172a}
+header{background:#0f172a;color:#fff;padding:1rem 1.25rem}
+.wrap{max-width:1100px;margin:1.25rem auto;padding:0 1rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+textarea{width:100%;height:60vh;padding:1rem;border-radius:8px;border:1px solid #e2e8f0;resize:vertical;font:14px/1.5monospace}
+.preview{background:#fff;padding:1rem;border-radius:8px;border:1px solid #e2e8f0;min-height:60vh;overflow:auto}
+.toolbar{display:flex;gap:.5rem;align-items:center;margin-bottom:.75rem}
+button{background:#0f172a;color:#fff;border:none;padding:.5rem .75rem;border-radius:8px;cursor:pointer}
+button.secondary{background:#e2e8f0;color:#0f172a}
+footer{margin:1.25rem auto;max-width:1100px;padding:0 1rem;color:#475569}
+@media (max-width:900px){.grid{grid-template-columns:1fr;}.preview,textarea{height:45vh}}
+.sample{font-size:0.95rem;color:#334155;background:#f1f5f9;padding:.6rem;border-radius:6px;border:1px dashed #e2e8f0}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<h1 style="margin:.1rem 0;font-size:1.15rem">LaTeX Live Preview</h1>
+<div style="opacity:.9;font-size:0.92rem">Type LaTeX on the left, see rendered math on the right. Supports inline \( ... \) and display $$ ... $$ delimiters.</div>
+</div>
+</header>
 
-    $$\Gamma(n) = \int_0^\infty x^{n-1} e^{-x} \dd x$$
-  </body>
-  
+
+<main class="wrap">
+<div class="toolbar">
+<button id="insertSample">Insert sample</button>
+<button id="clear" class="secondary">Clear</button>
+<button id="copySource" class="secondary">Copy source</button>
+<button id="download" class="secondary">Download .html</button>
+<div style="margin-left:auto;color:#64748b">Powered by KaTeX (CDN)</div>
+</div>
+
+
+<div class="grid">
+<div>
+<label for="src" style="display:block;margin-bottom:.5rem;font-weight:600">LaTeX source</label>
+<textarea id="src" placeholder="Type LaTeX here. Use \(inline\) or $$display$$ delimiters."></textarea>
+</div>
+<div>
+<label style="display:block;margin-bottom:.5rem;font-weight:600">Rendered preview</label>
+<div id="preview" class="preview" aria-live="polite"></div>
+</div>
+</div>
+
+
+<section style="margin-top:1rem">
+<div class="sample">
+Sample delimiters: inline: \(a^2 + b^2 = c^2\) — display:
+$$
+\int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
+$$
+</div>
+</section>
+</main>
+
+
+<footer>
+<div class="wrap">Tip: This is a single-file static HTML page. You can save it and open it locally in your browser.</div>
+</footer>
 </html>
