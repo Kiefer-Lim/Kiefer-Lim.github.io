@@ -1,18 +1,19 @@
 <!doctype html>
 <html lang="en">
+  
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<!-- KaTeX CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
 
-<!-- KaTeX JS -->
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <!-- KaTeX JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
 
-<!-- Auto-render extension -->
-<script>
+  <!-- Auto-render extension -->
+  <script>
   document.addEventListener("DOMContentLoaded", () => {
     // Render all existing math in the page
     renderMathInElement(document.body, {
@@ -21,8 +22,8 @@
         { left: "$$", right: "$$", display: true }     // display
       ],
       throwOnError: false
+      });
     });
-  });
 
   // Dropdown click handler
   document.addEventListener("click", (e) => {
@@ -49,78 +50,48 @@
   });
 </script>
   
-<title>Integrals</title>
+  <title>Integrals</title>
   
-<!-- KaTeX CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-  <style>
-        :root{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
-        body{margin:0;background:#f7fafc;color:#0f172a}
-        header{background:#0f172a;color:#fff;padding:1rem 1.25rem}
-        .wrap{max-width:1100px;margin:1.25rem auto;padding:0 1rem}
-        .grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-        textarea{width:100%;height:60vh;padding:1rem;border-radius:8px;border:1px solid #e2e8f0;resize:vertical;font:14px/1.5monospace}
-        .preview{background:#fff;padding:1rem;border-radius:8px;border:1px solid #e2e8f0;min-height:60vh;overflow:auto}
-        .toolbar{display:flex;gap:.5rem;align-items:center;margin-bottom:.75rem}
-        button{background:#0f172a;color:#fff;border:none;padding:.5rem .75rem;border-radius:8px;cursor:pointer}
-        button.secondary{background:#e2e8f0;color:#0f172a}
-        footer{margin:1.25rem auto;max-width:1100px;padding:0 1rem;color:#475569}
-        @media (max-width:900px){.grid{grid-template-columns:1fr;}.preview,textarea{height:45vh}}
-        .sample{font-size:0.95rem;color:#334155;background:#f1f5f9;padding:.6rem;border-radius:6px;border:1px dashed #e2e8f0}
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <style>
+          :root{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+          body{margin:0;background:#f7fafc;color:#0f172a}
+          header{background:#0f172a;color:#fff;padding:1rem 1.25rem}
+          .wrap{max-width:1100px;margin:1.25rem auto;padding:0 1rem}
+          .grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+          textarea{width:100%;height:60vh;padding:1rem;border-radius:8px;border:1px solid #e2e8f0;resize:vertical;font:14px/1.5monospace}
+          .preview{background:#fff;padding:1rem;border-radius:8px;border:1px solid #e2e8f0;min-height:60vh;overflow:auto}
+          .toolbar{display:flex;gap:.5rem;align-items:center;margin-bottom:.75rem}
+          button{background:#0f172a;color:#fff;border:none;padding:.5rem .75rem;border-radius:8px;cursor:pointer}
+          button.secondary{background:#e2e8f0;color:#0f172a}
+          footer{margin:1.25rem auto;max-width:1100px;padding:0 1rem;color:#475569}
+          @media (max-width:900px){.grid{grid-template-columns:1fr;}.preview,textarea{height:45vh}}
+          .sample{font-size:0.95rem;color:#334155;background:#f1f5f9;padding:.6rem;border-radius:6px;border:1px dashed #e2e8f0}
+    </style>
+  
+    
 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
+  <!-- Drop Down Menu-->
+    <script>
+      document.addEventListener("click", (e) => {const dropdown = e.target.closest(".dropdown");
+        // Close all open dropdowns
+          document.querySelectorAll(".dropdown.open").forEach(d => d.classList.remove("open"));
+        // If user clicked a dropdown, toggle it
+          if (dropdown) {dropdown.classList.toggle("open");}
+        });
+    </script> 
+    <style>
+      .dropdown {position: relative; display: inline-block; cursor: pointer;}
+      .dropdown-menu {display: none; position: absolute; top: 100%; left: 0; /* Make width match content */ width: max-content; white-space: nowrap; background: white; border: 1px solid #ccc; padding: 0.4rem 0; z-index: 100;}
+      .dropdown.open .dropdown-menu {display: block;}
+      /* Optional styling for items */
+      .dropdown-menu div {padding: 0.3rem 0.8rem;}
+      .dropdown-menu div:hover {background: #f0f0f0;}
+    </style>
+  </head>
 
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-
-    /* Make width match content */
-    width: max-content;
-    white-space: nowrap;
-
-    background: white;
-    border: 1px solid #ccc;
-    padding: 0.4rem 0;
-    z-index: 100;
-  }
-
-  .dropdown.open .dropdown-menu {
-    display: block;
-  }
-
-  /* Optional styling for items */
-  .dropdown-menu div {
-    padding: 0.3rem 0.8rem;
-  }
-
-  .dropdown-menu div:hover {
-    background: #f0f0f0;
-  }
-  </style>
-
-<!-- drop down menu-->
-<script>
-  document.addEventListener("click", (e) => {
-    const dropdown = e.target.closest(".dropdown");
-
-    // Close all open dropdowns
-    document.querySelectorAll(".dropdown.open")
-      .forEach(d => d.classList.remove("open"));
-
-    // If user clicked a dropdown, toggle it
-    if (dropdown) {
-      dropdown.classList.toggle("open");
-    }
-  });
-</script>
-        
-</head>
+  
 <body>
 <header>
   <div class="wrap">
