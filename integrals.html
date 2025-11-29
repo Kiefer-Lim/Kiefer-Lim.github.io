@@ -262,8 +262,8 @@
         <div> \( \Gamma(1) = 0! = 1 \) </div>
         <div> \( \Gamma(\frac{1}{2}) = \sqrt{\pi} \) </div>
         <div> \( \Gamma(x)\Gamma(1-x) = \frac{\pi}{\sin(\pi x)} \) </div>
-        <div> \( \Gamma(x) = \frac{2^{x-1}}{\sqty{\pi}} \Gamma(\frac{x}{2}) \Gamma(\frac{x+1}{2}) \) </div>
-        <div> \( \Gamma(x+1) \approx x^x e^{-x} \sqrt{2\pix} \) (Stirling's Approximation) </div>
+        <div> \( \Gamma(x) = \frac{2^{x-1}}{\sqrt{\pi}} \Gamma(\frac{x}{2}) \Gamma(\frac{x+1}{2}) \) </div>
+        <div> \( \Gamma(x+1) \approx x^x e^{-x} \sqrt{2\pi x} \) (Stirling's Approximation) </div>
         <div> \(\Gamma(x)\) is the unique function that satisfies 1. \( \Gamma(1) = 1 \); 2. \( \Gamma(x+1)=x\Gamma(x) \); 3. \( \ln \Gamma(x) \) is convex. </div>
       </div>
     </div>
@@ -279,6 +279,17 @@
         <div> \( = 2 \int_0^{\pi/2} \sin^{2x-1}(\theta)\cos^{2x-1}(\theta) d\theta \) for \(n \in \mathbb{Z}^+ \) </div>
         <div> \( = \int_0^\infty \frac{y^{x-1}}{(1+y)^{x+y}} dy \) </div>
       </div>
+    </div>
+    <div> (c) \( \int_0^\infty \frac{t^{q-1}}{1+t^p} dt = \frac{\pi/p}{\sin(\pi q/p)} \ (q>p>0)\) </div>
+    <div> (d) \( \frac{sin(x)}{x} \)-type integrals:</div>
+    <div class="dropdown">
+      <div class="dropdown-trigger"> (i) \( \int_0^\infty \frac{\sin(bx)}{x^p} dx = \frac{\pi b^{p-1}}{2 \Gamma(p) \sin(\pi p/2)} \) </div>
+      <div class="dropdown-menu">
+        <div> \( Beta(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} \) </div>
+        <div> \( = 2 \int_0^{\pi/2} \sin^{2x-1}(\theta)\cos^{2x-1}(\theta) d\theta \) for \(n \in \mathbb{Z}^+ \) </div>
+        <div> \( = \int_0^\infty \frac{y^{x-1}}{(1+y)^{x+y}} dy \) </div>
+      </div>
+
     </div>
   </section>
 
