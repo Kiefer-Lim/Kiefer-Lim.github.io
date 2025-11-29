@@ -255,17 +255,20 @@
         <div> \( \Gamma(1) = 0! = 1 \) </div>
         <div> \( \Gamma(\frac{1}{2}) = \sqrt{\pi} \) </div>
         <div> \( \Gamma(x)\Gamma(1-x) = \frac{\pi}{\sin(\pi x)} \) </div>
+        <div> \( \Gamma(x) = \frac{2^{x-1}}{\sqty{\pi}} \Gamma(\frac{x}{2}) \Gamma(\frac{x+1}{2}) \) </div>
       </div>
     </div>
     <p></p>
     <div> \( \int_{-\infty}^\infty e^{-\alpha x^2} dx = \frac{\sqrt{\pi}}{\alpha} \) </div>
+    <div> \( \int_{-\infty}^\infty x^m e^{-\alpha x^2} dx = \frac{1}{2\alpha^{(m+1)/2}} \Gamma(\frac{m+1}{2}) \) </div>
     <p></p>
+    <div> $$ B(x,y) = \int_0^1 t^{x-1}(1-t)^{y-1} dt \ (x,y>0) $$ </div>
     <div class="dropdown">
-      <div class="dropdown-trigger"> (b) Click for Properties of Gamma Function </div>
+      <div class="dropdown-trigger"> (b) Click for Properties of Beta Function </div>
       <div class="dropdown-menu">
-        <div> \( \Gamma(x+1) = x \Gamma(x) \) </div>
-        <div> \( \Gamma(n+1) = n! \) for \(n \in \mathcal{Z}^+ \) </div>
-        <div> \( \Gamma(1) = 0! = 1 \) </div>
+        <div> \( Beta(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} \) </div>
+        <div> \( = 2 \int_0^{\pi/2} \sin^{2x-1}(\theta)\cos^{2x-1}(\theta) d\theta \) for \(n \in \mathcal{Z}^+ \) </div>
+        <div> \( = \int_0^\infty \frac{y^{x-1}}{(1+y)^{x+y}} dy \) </div>
         <div> \( \Gamma(\frac{1}{2}) = \sqrt{\pi} \) </div>
         <div> \( \Gamma(x)\Gamma(1-x) = \frac{\pi}{\sin(\pi x)} \) </div>
       </div>
