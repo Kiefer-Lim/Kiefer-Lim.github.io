@@ -256,6 +256,8 @@
         <div> \( \Gamma(\frac{1}{2}) = \sqrt{\pi} \) </div>
         <div> \( \Gamma(x)\Gamma(1-x) = \frac{\pi}{\sin(\pi x)} \) </div>
         <div> \( \Gamma(x) = \frac{2^{x-1}}{\sqty{\pi}} \Gamma(\frac{x}{2}) \Gamma(\frac{x+1}{2}) \) </div>
+        <div> \( \Gamma(x+1) \approx x^x e^{-x} \sqrt{2\pix} \) (Stirling's Approximation) </div>
+        <div> \(\Gamma(x)\) is the unique function that satisfies 1. \( \Gamma(1) = 1 \); 2. \( \Gamma(x+1)=x\Gamma(x) \); 3. \( \ln \Gamma(x) \) is convex. </div>
       </div>
     </div>
     <p></p>
@@ -267,10 +269,8 @@
       <div class="dropdown-trigger"> (b) Click for Properties of Beta Function </div>
       <div class="dropdown-menu">
         <div> \( Beta(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} \) </div>
-        <div> \( = 2 \int_0^{\pi/2} \sin^{2x-1}(\theta)\cos^{2x-1}(\theta) d\theta \) for \(n \in \mathcal{Z}^+ \) </div>
+        <div> \( = 2 \int_0^{\pi/2} \sin^{2x-1}(\theta)\cos^{2x-1}(\theta) d\theta \) for \(n \in \mathbb{Z}^+ \) </div>
         <div> \( = \int_0^\infty \frac{y^{x-1}}{(1+y)^{x+y}} dy \) </div>
-        <div> \( \Gamma(\frac{1}{2}) = \sqrt{\pi} \) </div>
-        <div> \( \Gamma(x)\Gamma(1-x) = \frac{\pi}{\sin(\pi x)} \) </div>
       </div>
     </div>
   </section>
@@ -283,9 +283,9 @@
     <div> $$-\ln \cos(x) = \ln(2) + \sum_{k=1}^\infty (-1)^k \frac{\cos(2kx)}{k}$$ </div>
     <div> (c) Wallis' Product: $$\frac{\pi}{2} = \prod_{n=1}^\infty \frac{4n^2}{(4n^2-1)^2} = (\frac{2}{1}\cdot\frac{2}{3}) \cdot (\frac{4}{3}\cdot\frac{4}{5}) \cdot (\frac{6}{5}\cdot\frac{6}{7}) \cdot (\frac{8}{7}\cdot\frac{8}{9}) \dots $$ </div>
     <div> (d) Hyperbolic Tricks:</div>
-      <p> \( \arcsinh(x/a) = \ln( x/a+\sqrt{(x/a)^2+1} ) \) ; \( \frac{d}{dx} \rightarrow \frac{1}{\sqrt{x^2+a^2}} \) </p>
-      <p> \( \arccosh(x/a) = \ln( x/a+\sqrt{(x/a)^2-1} ) \) ; \( \frac{d}{dx} \rightarrow \frac{1}{\sqrt{x^2-a^2}} \) </p>
-      <p> \( \arctanh(x/a) = \frac{1}{2} \ln( \frac{a+x}{a-x} ) \) ; \( \frac{d}{dx} \rightarrow \frac{a}{x^2-a^2} \) </p>
+      <p> \( arcsinh(x/a) = \ln( x/a+\sqrt{(x/a)^2+1} ) \) ; \( \frac{d}{dx} \rightarrow \frac{1}{\sqrt{x^2+a^2}} \) </p>
+      <p> \( arccosh(x/a) = \ln( x/a+\sqrt{(x/a)^2-1} ) \) ; \( \frac{d}{dx} \rightarrow \frac{1}{\sqrt{x^2-a^2}} \) </p>
+      <p> \( arctanh(x/a) = \frac{1}{2} \ln( \frac{a+x}{a-x} ) \) ; \( \frac{d}{dx} \rightarrow \frac{a}{x^2-a^2} \) </p>
   </section>
     
   <section id="Others" style="margin-top:1rem" class="sample wrap">
@@ -305,11 +305,13 @@
     </div>
     <p></p>
     <div class="dropdown">
-      <div class="dropdown-trigger"> (b) With recursion: \( \int_0^\pi \frac{\cos(n\theta) - \cos(n\alpha)}{\cos(\theta) - \cos(\alpha)} = \frac{\pi \sin(n\alpha)}{\alpha} </div>
+      <div class="dropdown-trigger"> (b) With recursion: \( \int_0^\pi \frac{\cos(n\theta) - \cos(n\alpha)}{\cos(\theta) - \cos(\alpha)} d\theta = \frac{\pi \sin(n\alpha)}{\alpha} \ (n\in \mathbb{Z}^+) \) </div>
       <div class="dropdown-menu">
         <div> \( I_n(\alpha) := \) the above integral </div>
-        <div> \( I_{n+1} - 2 \cos(\alpha) I_n + I_{n-1} =  \) </div>
-        <div>  </div>
+        <div> Since \( e^{i(n+1)\theta} - 2 \cdot \cos(\alpha) e^{in\theta} + e^{i(n-1)\theta} = 2 e^{inx} (\cos(\theta) - \cos(\alpha)) \), we get </div>
+        <div> \( I_{n+1} - 2 \cos(\alpha) I_n + I_{n-1} = \text{Re} \int_0^\pi \frac{ e^{i(n+1)\theta} - 2 \cdot \cos(\alpha) e^{in\theta} + e^{i(n-1)\theta} + e^{i(n+1)\alpha} - 2 \cdot \cos(\alpha) e^{in\alpha} + e^{i(n-1)\alpha} }{\cos(\theta) - \cos(\alpha)} \) </div>
+        <div> \( = \int_0^\pi \frac{\cos(n\theta) \cancel{(\cos(\theta) -\cos(\alpha))}}{\cancel{\cos(\theta) - \cos(\alpha)}} d\theta = \int_0^\pi \cos(n\theta) d \theta = 0 \) </div>
+        <div> The roots of the equation for the above recurrence is \( I_n(\alpha) = C_1 e^{in\alpha} + C_2 e^{-in\alpha} = \frac{\pi \sin(n\alpha)}{\alpha}\) </div>
       </div>
     </div>
   </section>
