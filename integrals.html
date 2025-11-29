@@ -334,7 +334,17 @@
         <div> \(  \) </div>
       </div>
     </div>
-    
+    <p></p>
+    <div class="dropdown">
+      <div class="dropdown-trigger"> (e) \( \int_0^\infty \frac{1-e^{-cx}}{x} \cos(bx) dx = \frac{1}{2}\ln(1 + \frac{c^2}{b^2}) \) </div>
+      <div class="dropdown-menu">
+        <div> \( = \int_0^\infty \cos(bx) [- \frac{e^{-yx}}{x}]_{y=0}^{y=c} \ dx \) </div>
+        <div> \( = \int_0^\infty \cos(bx) \int_0^c e^{-yx} dy \ dx \) </div>
+        <div> \( = \int_0^c \int_0^\infty \cos(bx) e^{-yx} dx \ dy \) </div>
+        <div> \( = \int_0^x \frac{y}{b^2+y^2} dy \) </div>
+        <div> \( = \frac{1}{2} \ln(\frac{b^2+c^2}{b^2}) \) </div>
+      </div>
+    </div>
   </section>
 
   <section id="Identities" style="margin-top:1rem" class="sample wrap">
