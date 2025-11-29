@@ -280,11 +280,37 @@
     <div> $$-\ln \cos(x) = \ln(2) + \sum_{k=1}^\infty (-1)^k \frac{\cos(2kx)}{k}$$ </div>
     <div> (c) Wallis' Product: $$\frac{\pi}{2} = \prod_{n=1}^\infty \frac{4n^2}{(4n^2-1)^2} = (\frac{2}{1}\cdot\frac{2}{3}) \cdot (\frac{4}{3}\cdot\frac{4}{5}) \cdot (\frac{6}{5}\cdot\frac{6}{7}) \cdot (\frac{8}{7}\cdot\frac{8}{9}) \dots $$ </div>
   </section>
-  
+    
+  <section id="Others" style="margin-top:1rem" class="sample wrap">
+    <p>Other Cool Integrals!</p>
+    <div class="dropdown">
+      <div class="dropdown-trigger"> (a) One with King's Rule and oddness: \( \int_0^\infty \frac{dx}{x^4 + 2x^2 \cos(2\alpha) + 1} = \frac{\pi}{4\cos(\alpha)} \) </div>
+      <div class="dropdown-menu">
+        <div> \( \int_{-\infty}^0 \frac{-dx/x^2}{1/x^4 + 2\cos(2\alpha)/x^2 + 1} = \int_0^\infty \frac{x^2}{x^4 + 2x^2 \cos(2\alpha) + 1} dx \) </div>
+        <div> \( = \frac{1}{4} \int_{-\infty}^\infty \frac{1+x^2}{x^4 + x^2 (1 - 2 \sin^2(\alpha)) + 1 } \) </div>
+        <div> \( = \frac{1}{4} \int_{-\infty}^\infty \frac{1 - 2x \sin(\alpha) + x^2}{ x^4 + 2x^2 + 1 - 4x^2 \sin(\alpha) } \) </div>
+        <div> \( = \frac{1}{4} \int_{-\infty}^\infty \frac{\cancel{1 - 2x \sin(\alpha) + x^2}}{ \cancel{[x^2 - 2 x \sin(\alpha) + 1]} [x^2 + 2 x \sin(\alpha) + 1 ] } \) </div>
+        <div> \( = \frac{1}{4} \int_{-\infty}^\infty \frac{dx}{ x^2 + 2x \sin(\alpha) + \sin^2(\alpha) + \cos^2(\alpha) } \) </div>
+        <div> \( = \frac{1}{4} \int_{-\infty}^\infty \frac{dx}{ ( x + \sin(\alpha) )^2 + \cos^2(\alpha) } \) </div>
+        <div> \( = \frac{1}{4 \cos(\alpha)} \arctan(\frac{x}{\cos(\alpha)}) |_{\infty}^\infty } \) </div>
+        <div> \( = \frac{\pi}{4 \cos(\alpha)} \) </div>
+      </div>
+    </div>
+    <p></p>
+    <div class="dropdown">
+      <div class="dropdown-trigger"> (b) With recursion: \( \int_0^\pi \frac{\cos(n\theta) - \cos(n\alpha)}{\cos(\theta) - \cos(\alpha)} = \frac{\pi \sin(n\alpha)}{\alpha} </div>
+      <div class="dropdown-menu">
+        <div> \( I_n(\alpha) := \) the above integral </div>
+        <div> \( I_{n+1} - 2 \cos(\alpha) I_n + I_{n-1} =  \) </div>
+        <div>  </div>
+      </div>
+    </div>
+  </section>
+    
   </main>
 
   <footer>
-  <div class="wrap">Tip: This is a single-file static HTML page. You can save it and open it locally in your browser.</div>
+  <div class="wrap">Hello!</div>
   </footer>
 
 </body>
