@@ -117,15 +117,13 @@
 <section style="margin-top:1rem" class="sample wrap">
   <p>Integration Tricks</p>
   <div>King's Rule: $$\int_a^b f(x) dx = \int_a^b f(a+b-x) dx $$</div>
-  <div>Feynman's Trick: $$ I'(\alpha) = \int_a^b \frac{d}{dx}(f(x,\alpha)) dx $$ </div>
+  <div>Feynman's Trick: $$ I'(\alpha) = \int_a^b \frac{\partial}{\partial \alpha}(f(x,\alpha)) dx $$ </div>
 </section>
 
-  <section style="margin-top:1rem">
-  <div class="sample wrap">
+  <section style="margin-top:1rem" class="sample wrap">
     <p>0. Useful Integrals</p>
   <div class="dropdown">
-    <div class="dropdown-trigger">(a) \( \int_0^\pi \frac{a+b\cos(x)} dx = \frac{\pi}{\sqrt{a^2-b^2 }} ; a > |b|\) </div>
-  
+    <div class="dropdown-trigger">(a) \( \int_0^\pi \frac{1}{a+b\cos(x)} dx = \frac{\pi}{\sqrt{a^2-b^2 }} ; a > |b|\) </div>
     <div class="dropdown-menu">
       <div> \( = \int_0^\infty \frac{1}{a+b(\frac{1-t^2}{1+t^2})} \cdot \frac{2}{1+t^2} dt \) </div>
       <div> \( = \int_0^\infty \frac{2}{a(1+t^2) + b(1-t^2)} dt\) </div>
@@ -138,7 +136,6 @@
     <p></p>
   <div class="dropdown">
     <div class="dropdown-trigger">(b) \( \int_0^\infty \frac{\cos(ax)}{x^2+b^2} dx = \frac{\pi}{2b}e^{-ab} \) </div>
-  
     <div class="dropdown-menu">
       <div> \( = \text{Re } \frac{1}{2} \int_{-\infty}^\infty \frac{e^{iax}}{x^2 + b^2} dx ; \) </div>
       <div> \( \frac{1}{2} \int_{-\infty}^\infty \frac{e^{iaz}}{z^2 + b^2} \) </div>
@@ -151,7 +148,6 @@
   <p></p>
   <div class="dropdown">
     <div class="dropdown-trigger">(c) \( \int_0^\infty e^{-sx} \cos(bx) dx = \frac{b}{b^2+s^2} ; \int_0^\infty e^{-sx} \sin(bx) dx = \frac{s}{b^2+s^2} \) </div>
-  
     <div class="dropdown-menu">
       <div> \( = \int_0^\infty e^{-sx + ibx} \) </div>
       <div> \( = \int_0^\infty e^{(-s + ib)x} \) </div>
@@ -160,6 +156,21 @@
       <div> \( \frac{s+ib}{s^2+b^2} \) </div>
     </div>
   </div>
+  <p></p>
+  <div class="dropdown">
+    <div class="dropdown-trigger">(d) \( \int_0^{\pi/2} \ln \sin(x) dx = \int_0^{\pi/2} \ln \cos(x) dx = \frac{\pi}{2}\ln(2) \) </div>
+    <div class="dropdown-menu">
+      <div> \( 2 \int_0^{\pi/2} \ln \sin(x) dx \) </div>
+      <div> \( = \int_0^{\pi/2} \ln \sin(x) dx + \int_{\pi/2}^{\pi} \ln \sin(\pi - x) dx \) </div>
+      <div> \( = \int_0^{\pi} \ln \sin(x) dx \) </div>
+      <div> \( = \int_0^{\pi/2} \ln \sin(2x) \cdot 2 \cdot dx \) </div>
+      <div> \( = 2 \int_0^{\pi/2} \ln 2 \sin(x) \cos(x) dx \) </div>
+      <div> \( = 2 \cdot \frac{\pi}{2} \ln(2) + 2 \int_0^{\pi/2} \ln \sin(x) dx + \int_0^{\pi/2} \ln \cos(x) dx\) </div>
+      <div> \( = \pi \ln(2) + 4 \int_0^{\pi/2} \ln \sin(x) dx\) </div>
+      <div> Cancelling \( 2 \int_0^{\pi/2} \ln \sin(x) dx \) from the top and bottom yields </div>
+      <div> \( 0 = \pi \ln(2) + 4 \int_0^{\pi/2} \ln \sin(x) dx\) </div>
+      <div> \( \int_0^{\pi/2} \ln \sin(x) dx = -\frac{\pi}{2}\ln(2) \) </div>
+    </div>
   </div>
   </section>
 
