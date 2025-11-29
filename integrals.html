@@ -348,10 +348,27 @@
   </section>
 
   <section id="Integral_3" style="margin-top:1rem" class="sample wrap">
-    <p>Zeta function Integrals</p>
+    <p>Zeta function Integrals: </p>
     <div> $$ \int_0^\infty \frac{x^{s-1}}{e^x-1} = \Gamma(s) \zeta(s) \ (s>1) $$ </div>
     <div> $$ \int_0^\infty \frac{x^{s-1}}{e^x+1} = [1-2^{1-s}] \Gamma(s) \zeta(s) \ (s>1) $$ </div>
+    <div class="dropdown">
+      <div class="dropdown-trigger"> (a) \( \int_0^1 \int_0^1 \frac{x^a y^a}{1-xy} dx \ dy = \sum_{n=1}^\infty \frac{1}{(n+a)^2} \) </div>
+      <div class="dropdown-menu">
+        <div> \( = \int_0^1 x^a \int_0^1 (y^a + xy^{a+1} + x^2 y^{a+2} + \dots) dy \ dx \) </div>
+        <div> \( = \int_0^1 x^a ( \frac{1}{a+1} + \frac{x}{a+2} + \frac{x^2}{a+3} + \dots )  dx \) </div>
+        <div> \( = \frac{1}{(a+1)^2} + \frac{1}{(a+2)^2} + \frac{1}{(a+3)^2} + \dots \) </div>
+      </div>
+    </div>
+    <p></p>
+    <div class="dropdown">
+      <div class="dropdown-trigger"> (b) \( \int_0^1 \int_0^1 \frac{(xy)^a \{ \ln(xy) \}^{s-2} }{1-xy} dx \ dy = (-1)^s (s-1)! \sum_{n=1}^\infty \frac{1}{(n+a)^s} \ (s=2,3,4,\dots) \) </div>
+      <div class="dropdown-menu">
+        <div> Differentiate part (a) wrt \(a\), s-2 times. </div>
+      </div>
+    </div>
     <div> Euler-Mascheroni Constant: $$\gamma := \lim_{n \rightarrow \infty} - \ln(n) + \sum_{k=1}^n \frac{1}{k} = 0.5772156649 \dots $$ </div>
+    <div> \( \gamma = -\int_0^\infty e^{-x} \ln(x) dx = - \int_0^1 \ln(\ln(x)) dx = \int_0^1 \frac{1-e^{-u}}{u} du - \int_1^\infty \ frac{e^{-u}}{u} du \) </div>
+    <div> Digamma function: \psi(z+1) $$ \frac{\Gamma'(z+1)}{\Gamma(z+1)} = -\gamma + \sum+{r=1}T\infty \frac{1}{r} - \frac{1}{r+z} $$ </div>
   </section>
   
   <section id="Identities" style="margin-top:1rem" class="sample wrap">
