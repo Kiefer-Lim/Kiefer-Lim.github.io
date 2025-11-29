@@ -165,15 +165,29 @@
       <div> \( = \int_0^{\pi} \ln \sin(x) dx \) </div>
       <div> \( = \int_0^{\pi/2} \ln \sin(2x) \cdot 2 \cdot dx \) </div>
       <div> \( = 2 \int_0^{\pi/2} \ln 2 \sin(x) \cos(x) dx \) </div>
-      <div> \( = 2 \cdot \frac{\pi}{2} \ln(2) + 2 \int_0^{\pi/2} \ln \sin(x) dx + \int_0^{\pi/2} \ln \cos(x) dx\) </div>
+      <div> \( = 2 \cdot \frac{\pi}{2} \ln(2) + 2 \int_0^{\pi/2} \ln \sin(x) dx + 2 \int_0^{\pi/2} \ln \cos(x) dx\) </div>
       <div> \( = \pi \ln(2) + 4 \int_0^{\pi/2} \ln \sin(x) dx\) </div>
       <div> Cancelling \( 2 \int_0^{\pi/2} \ln \sin(x) dx \) from the top and bottom yields </div>
-      <div> \( 0 = \pi \ln(2) + 4 \int_0^{\pi/2} \ln \sin(x) dx\) </div>
+      <div> \( 0 = \pi \ln(2) + 2 \int_0^{\pi/2} \ln \sin(x) dx\) </div>
       <div> \( \int_0^{\pi/2} \ln \sin(x) dx = -\frac{\pi}{2}\ln(2) \) </div>
     </div>
   </div>
+  <p></p>
   </section>
 
+<section style="margin-top:1rem" class="sample wrap">
+  <p>Feynman's Favourite Trick</p>
+  <div class="dropdown">
+    <div class="dropdown-trigger">(a) \( \int_0^\infty \frac{ e^{-yx} \sin(ax) }{x} dx = \frac{\pi}{2} - \arctan(\frac{y}{a}) \) </div>
+    <div class="dropdown-menu">
+      <div> \( I(y) := \int_0^\infty \frac{ e^{-yx} \sin(ax) }{x} dx \) </div>
+      <div> \( I'(y) = \int_0^\infty - e^{-yx} \sin(ax) dx = - \frac{a}{a^2+y^2} \) </div>
+      <div> \( \cancelto{0}{I(\infty)} - I(y) = [- arctan(\frac{y}{a})]_y^\infty = -\frac{\pi}{2} + \arctan(\frac{y}{a}) </div>
+      <div> \( I(y) = \frac{\pi}{2} - \arctan(y/a) \) </div>
+    </div>
+  </div>
+</section>
+  
 <section style="margin-top:1rem" class="sample wrap">
   <p>1. Catalan's Constant</p>
   <p>$$ G := \frac{1}{1^2} - \frac{1}{3^2} + \frac{1}{5^2} - \frac{1}{7^2} + \frac{1}{9^2} - \dots $$</p>
