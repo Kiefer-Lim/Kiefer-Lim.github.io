@@ -279,6 +279,7 @@
         <div> \( = \int_0^\infty \frac{y^{x-1}}{(1+y)^{x+y}} dy \) </div>
       </div>
     </div>
+    <p></p>
     <div> (c) \( \int_0^\infty \frac{t^{q-1}}{1+t^p} dt = \frac{\pi/p}{\sin(\pi q/p)} \ (p>q>0)\) </div>
     <div> (d) \( \frac{\sin(x)}{x} \)-type integrals:</div>
     <div class="dropdown">
@@ -291,6 +292,7 @@
         <div> \( \int_0^\infty \frac{\sin(bx)}{x^p} = \frac{b^{p-1}}{\Gamma(p)}\cdot\frac{\pi/2}{\sin(\pi p/2)} \) </div>
       </div>
     </div>
+    <p></p>
     <div class="dropdown">
       <div class="dropdown-trigger"> (ii) \( \int_0^\infty \frac{\cos(bx)}{x^p} dx = \frac{b^{p-1}}{\Gamma(p)}\cdot\frac{\pi/2}{\cos(\pi p/2)} \ (1>p>0) \) </div>
       <div class="dropdown-menu">
@@ -301,14 +303,20 @@
         <div> \( \int_0^\infty \frac{\cos(bx)}{x^p} = \frac{b^{p-1}}{\Gamma(p)}\cdot\frac{\pi/2}{\cos(\pi p/2)} \) </div>
       </div>
     </div>
+    <p></p>
     <div class="dropdown">
-      <div class="dropdown-trigger"> (iii) \( \int_0^\infty \frac{\sin(x^q)}{x^q} dx = \frac{\Gamma(1/p)}{q-1} \cos(\frac{\pi}{2q}) \ (q>1) \) </div>
+      <div class="dropdown-trigger"> (iii) \( \int_0^\infty \frac{\sin(x^q)}{x^q} dx = \frac{\Gamma(1/q)}{q-1} \cos(\frac{\pi}{2q}) \ (q>1) \) </div>
       <div class="dropdown-menu">
-        <div> \(  \) </div>
-        <div> \(  \) </div>
-        <div> \(  \) </div>
+        <div> \( u = x^q\): \( = \int_0^\infty \frac{\sin(u)}{q u^{2-1/q}} du = \frac{1}{q \Gamma(2-1/q)} \cdot \frac{\pi/2}{ \sin(\pi (1 - 1/2q)) }  \) </div>
+        <div> \( = \frac{1}{q \Gamma(2-1/q)} \cdot \frac{\pi/2}{ \sin(\pi/2q)) } \) </div>
+        <div> \( = \frac{1}{q (1-1/q) \Gamma(1-1/q)} \cdot \frac{\pi/2}{ \sin(\pi/2q)) } \) </div>
+        <div> \( = \frac{\Gamma(1/q)}{(q-1) \Gamma(1-1/q)\Gamma(1/q)} \cdot \frac{\pi/2}{ \sin(\pi/2q)) } \) </div>
+        <div> \( = \frac{\Gamma(1/q) \sin(\pi/q) }{(q-1) \cancel{\pi} )} \cdot \frac{\cancel{\pi}/2}{ \sin(\pi/2q)) } \) </div>
+        <div> \( = \frac{\Gamma(1/q) \cdot \cancel{2} \cancel{\sin(\pi/2q)} \cos(\pi/2q) }{(q-1) )} \cdot \frac{\cancel{1/2}}{ cancel{\sin(\pi/2q))} } \) </div>
+        <div> \( = \frac{\Gamma(1/q)}{q-1} \cos(\frac{\pi}{2q}) \) </div>
       </div>
     </div>
+    <p></p>
     <div class="dropdown">
       <div class="dropdown-trigger"> (iv) \( \int_0^\infty \sin(bx^k) dx = \frac{\Gamma(1/k)}{k b ^{1/k}}\sin(\frac{\pi}{2k}) \ (k>1) \) </div>
       <div class="dropdown-menu">
@@ -317,6 +325,7 @@
         <div> \(  \) </div>
       </div>
     </div>
+    <p></p>
     <div class="dropdown">
       <div class="dropdown-trigger"> (iv) \( \int_0^\infty \cos(bx^k) dx = \frac{\Gamma(1/k)}{k b ^{1/k}}\cos(\frac{\pi}{2k}) \ (k>1) \) </div>
       <div class="dropdown-menu">
