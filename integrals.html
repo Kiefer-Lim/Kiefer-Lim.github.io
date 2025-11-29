@@ -200,7 +200,7 @@
   </div>
   <p></p>
   <div class="dropdown">
-    <div class="dropdown-trigger">(c) Frullani: $$\int_0^\infty \frac{f(ax) - f(bx)}{x} = (f(\infty)-f(0)/)\ln(\frac{a}{b}) dx $$ \(a,b>0\) and \(f\) is continuous on \( (0,\infty) \) </div>
+    <div class="dropdown-trigger">(c) Frullani: $$\int_0^\infty \frac{f(ax) - f(bx)}{x} = (f(\infty)-f(0))\ln(\frac{a}{b}) dx $$ \(a,b>0\) and \(f\) is continuous on \( (0,\infty) \) </div>
     <div class="dropdown-menu">
       <div> \( = \int_0^\infty [\frac{f(yx)}{x}]_{y=a}^{y=b} dx \) </div>
       <div> \( = \int_0^\infty \int_a^b f'(yx) dy dx \) </div>
@@ -208,9 +208,10 @@
       <div> \( = \int_a^b \int_0^\infty f'(yx) dx dy \) </div>
       <div> \( = \int_a^b [\frac{f(xy)}{y}]_{x=0}^{x=\infty} dy \) </div>
       <div> \( = \int_a^b \frac{f(\infty)-f(0)}{y} dy \) </div>
-      <div> \( = (f(\infty) - f(0)) \int_a^b \frac{1}{y} dy = (f(\infty)-f(0)/)\ln(\frac{a}{b}) \) </div>
+      <div> \( = (f(\infty) - f(0)) \int_a^b \frac{1}{y} dy = (f(\infty)-f(0))\ln(\frac{a}{b}) \) </div>
     </div>
   </div>
+  <div> (d) Graduate Frullani: $$\int_0^\infty \frac{f(ax) - f(bx)}{x} = (\lim_{x \rightarrow \infty} \frac{1}{x} \int_{c>0}^x \frac{f(t)}{t} dt - \lim_{x \rightarrow 0^+} x \int_{x}^{d>0} \frac{f(t)}{t^2} dt ) \ln(\frac{a}{b})$$ </div>
 </section>
   
 <section style="margin-top:1rem" class="sample wrap">
