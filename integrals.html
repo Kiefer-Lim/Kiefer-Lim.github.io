@@ -186,6 +186,31 @@
       <div> \( I(y) = \frac{\pi}{2} - \arctan(y/a) \) </div>
     </div>
   </div>
+  <p></p>
+  <div class="dropdown">
+    <div class="dropdown-trigger">(b) \( \int_0^1 \frac{ x^a - 1 }{\ln (x) } dx = \ln(a+1) \) </div>
+    <div class="dropdown-menu">
+      <div> \( = \int_0^1 [\frac{x^y}{\ln(x)}]_{y=0}^{y=a} dx \) </div>
+      <div> \( = \int_0^1 \int_0^a x^y dy dx \) </div>
+      <div> \( = \int_0^a \int_0^1 x^y dx dy \) </div>
+      <div> \( = \int_0^a [\frac{x^{y+1}}{y+1}]_0^1 dy \) </div>
+      <div> \( = \int_0^a \frac{1}{y+1} dy \) </div>
+      <div> \( = [\ln(y+1) ]_0^a = \ln(a+1) \) </div>
+    </div>
+  </div>
+  <p></p>
+  <div class="dropdown">
+    <div class="dropdown-trigger">(c) Frullani: $$\int_0^\infty \frac{f(ax) - f(bx)}{x} = (f(\infty)-f(0)/)\ln(\frac{a}{b}) dx $$ \(a,b>0\) and \(f\) is continuous on \( (0,\infty) \) </div>
+    <div class="dropdown-menu">
+      <div> \( = \int_0^\infty [\frac{f(yx)}{x}]_{y=a}^{y=b} dx \) </div>
+      <div> \( = \int_0^\infty \int_a^b f'(yx) dy dx \) </div>
+      <div> \( = \int_0^\infty \int_a^b f'(yx) dy dx \) </div>
+      <div> \( = \int_a^b \int_0^\infty f'(yx) dx dy \) </div>
+      <div> \( = \int_a^b [\frac{f(xy)}{y}]_{x=0}^{x=\infty} dy \) </div>
+      <div> \( = \int_a^b \frac{f(\infty)-f(0)}{y} dy \) </div>
+      <div> \( = (f(\infty) - f(0)) \int_a^b \frac{1}{y} dy = (f(\infty)-f(0)/)\ln(\frac{a}{b}) \) </div>
+    </div>
+  </div>
 </section>
   
 <section style="margin-top:1rem" class="sample wrap">
@@ -215,6 +240,7 @@
       <div> </div>
     </div>
   </div>
+  
 </section>
 
   <section id="Integral_2" style="margin-top:1rem" class="sample wrap">
