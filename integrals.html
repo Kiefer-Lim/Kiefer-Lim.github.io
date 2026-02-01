@@ -372,7 +372,7 @@
     <p></p>
     <div> Euler-Mascheroni Constant: $$\gamma := \lim_{n \rightarrow \infty} - \ln(n) + \sum_{k=1}^n \frac{1}{k} = 0.5772156649 \dots $$ </div>
     <div> \( \gamma = -\int_0^\infty e^{-x} \ln(x) dx = - \int_0^1 \ln(\ln(x)) dx = \int_0^1 \frac{1-e^{-u}}{u} du - \int_1^\infty \frac{e^{-u}}{u} du \) </div>
-    <div> Digamma function: $$ \psi(z+1) \frac{\Gamma'(z+1)}{\Gamma(z+1)} = -\gamma + \sum_{r=1}^\infty \frac{1}{r} - \frac{1}{r+z} $$ </div>
+    <div> Digamma function: $$ \psi(z+1) = \frac{\Gamma'(z+1)}{\Gamma(z+1)} = -\gamma + \sum_{r=1}^\infty \frac{1}{r} - \frac{1}{r+z} $$ </div>
   </section>
   
   <section id="Identities" style="margin-top:1rem" class="sample wrap">
@@ -417,11 +417,11 @@
     </div>
     <p></p>
     <div class="dropdown">
-      <div class="dropdown-trigger"> (c) Series expansion of ln: \( \int_0^1 \frac{\ln(1 \pm x)}{x} dx = \frac{\pi^2}{12} \) </div>
+      <div class="dropdown-trigger"> (c) Series expansion of ln: \( \int_0^1 \frac{\ln(1 \pm x)}{x} dx = \frac{\pi^2}{12} \) or \( -\frac{\pi^2}/6 \) </div>
       <div class="dropdown-menu">
         <div> \( = \int_0^1 \frac{1}{x} (\pm x - \frac{x^2}{2} \pm \frac{x^3}{3}) - \frac{x^4}{4} \pm \dots dx \) </div>
         <div> \( = \pm 1 - \frac{1}{2^2} \pm \frac{1}{3^2} - \frac{1}{4^2} \pm \dots \) </div>
-        <div> \( = \frac{\pi^2}{12} \text{ or } -\frac{\pi}{6} \) </div>
+        <div> \( = \frac{\pi^2}{12} \text{ or } -\frac{\pi^2}{6} \) </div>
       </div>
     </div>
     <p></p>
