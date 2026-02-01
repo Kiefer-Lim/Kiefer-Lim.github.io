@@ -426,11 +426,23 @@
     </div>
     <p></p>
     <div class="dropdown">
-      <div class="dropdown-trigger"> (d) Functions with \( sin(x) \pm \cos(x) \) : \( \int \sqrt{\tan(x)} dx =  \) </div>
+      <div class="dropdown-trigger"> (d) Functions with \( \sin(x) \pm \cos(x) \) : \( \int \sqrt{\tan(x)} dx \), \( \int \sqrt{\cot(x)} dx \) </div>
       <div class="dropdown-menu">
         <div> Define \( I = \int \sqrt{\tan(x)} dx \) and \( J = \int \sqrt{\cot(x)} dx \) </div>
-        <div> \( =  \) </div>
-        <div> \( =  \) </div>
+        <div> \( I+J = \int \sqrt{\tan(x)} + \sqrt{\cot(x)} dx = \int \frac{ \sin(x) + \cos(x) }{\sqrt{\cos(x)\sin(x)}} dx \) </div>
+        <div> \( = \int \frac{ \sin(x) + \cos(x) }{\sqrt{1/2 - 1/2 + \cos(x)\sin(x)}} dx \) </div>
+        <div> \( = \int \frac{ \sin(x) + \cos(x) }{\sqrt{1/2 - 1/2(\cos(x) - \sin(x))^2}} dx \) </div>
+        <div> \( = \int \frac{ -du }{\sqrt{1/2 - u^2/2} \) where \( u = \cos(x) -\sin(x) \) </div>
+        <div> \( = \int \frac{ - \sqrt{2} du }{\sqrt{1 - u^2} \) </div>
+        <div> \( = \sqrt{2} \arcsin( \sin(x) - \cos(x) ) + C \) </div>
+        <div> \( I-J = \int \sqrt{\tan(x)} - \sqrt{\cot(x)} dx = \int \frac{ \sin(x) - \cos(x) }{\sqrt{\cos(x)\sin(x)}} dx \) </div>
+        <div> \( = \int \frac{ \sin(x) - \cos(x) }{\sqrt{1/2 - 1/2 + \cos(x)\sin(x)}} dx \) </div>
+        <div> \( = \int \frac{ \sin(x) - \cos(x) }{\sqrt{1/2(\cos(x) + \sin(x))^2 - 1/2}} dx \) </div>
+        <div> \( = \int \frac{ -du }{\sqrt{u^2/2 - 1/2} \) where \( u = \cos(x) + \sin(x) \) </div>
+        <div> \( = \int \frac{ - \sqrt{2} du }{\sqrt{u^2 - 1} \) </div>
+        <div> \( = - \sqrt{2} arccosh( \sin(x) + \cos(x) ) + C \) </div>
+        <div> \( I = \frac{1}{\sqrt{2}} ( \arcsin( \sin(x) - \cos(x) ) - arccosh( \sin(x) + \cos(x) ) ) \) </div>
+        <div> \( J = \frac{1}{\sqrt{2}} ( \arcsin( \sin(x) - \cos(x) ) + arccosh( \sin(x) + \cos(x) ) ) \) </div>
       </div>
     </div>
   </section>
