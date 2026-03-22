@@ -374,6 +374,11 @@
     <div> \( \gamma = -\int_0^\infty e^{-x} \ln(x) dx = - \int_0^1 \ln(\ln(x)) dx = \int_0^1 \frac{1-e^{-u}}{u} du - \int_1^\infty \frac{e^{-u}}{u} du \) </div>
     <div> Digamma function: $$ \psi(z+1) = \frac{\Gamma'(z+1)}{\Gamma(z+1)} = -\gamma + \sum_{r=1}^\infty \frac{1}{r} - \frac{1}{r+z} $$ </div>
   </section>
+
+  <section id="Integral_3" style="margin-top:1rem" class="sample wrap">
+  <p>4. Borwein Integrals: </p>
+    <div> \[ \int_0^\infty \frac{sin(x)}{x}\frac{sin(x/3)}{x/3} \dots \frac{sin(x/13)}{x/13} dx = \frac{\pi}{2} \] </div>
+  </section>
   
   <section id="Identities" style="margin-top:1rem" class="sample wrap">
     <div>Useful Identities</div>
@@ -395,15 +400,24 @@
         <div> \( arccsc(x/a) = arcsin(a/x) \rightarrow -\frac{a}{x \sqrt{x^2-a^2}} \) </div>
         <div> \( arcsec(x/a) = arccos(a/x) \rightarrow \frac{a}{x \sqrt{x^2-a^2}} \) </div>
         <div> \( \frac{1}{a}arccot(x/a) = \frac{1}{a}arctan(a/x) = \pi/2a - \frac{1}{a}arctan(x/a) \rightarrow - \frac{1}{a^2+x^2} \) </div>
-        <div> \( arcsinh(x/a) \rightarrow \frac{1}{\sqrt{x^2+a^2} \) </div>
-        <div> \( arccosh(x/a) \rightarrow \frac{1}{\sqrt{x^2-a^2} \) </div>
+        <div> \( arcsinh(x/a) \rightarrow \frac{1}{\sqrt{x^2+a^2}} \) </div>
+        <div> \( arccosh(x/a) \rightarrow \frac{1}{\sqrt{x^2-a^2}} \) </div>
         <div> \( \frac{1}{a}arctanh(x/a) \rightarrow \frac{1}{a^2-x^2} \) </div>
-        <div> \( arccsch(x/a) \rightarrow -\frac{a}{x\sqrt{x^2+a^2} \) </div>
-        <div> \( arcsech(x/a) \rightarrow -\frac{a}{x\sqrt{x^2-a^2} \) </div>
+        <div> \( arccsch(x/a) \rightarrow -\frac{a}{x\sqrt{x^2+a^2}} \) </div>
+        <div> \( arcsech(x/a) \rightarrow -\frac{a}{x\sqrt{x^2-a^2}} \) </div>
         <div> \( \frac{1}{a}arccoth(x/a) \rightarrow \frac{1}{a^2-x^2} \) </div>
       </div>
     </div>
     <div> (f) Sophie Germaine Identity: \( a^4 + 4b^4 = (a^2 + 2ab + 2b^2)(a^2 - 2ab + 2b^2) \) </div>
+    <div class="dropdown">
+      <div class="dropdown-trigger"> (g) Polylogarithms \( Li_s(z) := \sum_{k=1}^\infty \frac{z^k}{k^s} \) </div>
+      <div class="dropdown-menu">
+        <div> \( Li_1(\frac{1}{2}) = \ln(2) \) </div>
+        <div> \( Li_2(\frac{1}{2}) = \frac{pi^2}{12}-\frac{1}{2}(\ln(2))^2 \) </div>
+        <div> \( Li_2(2) = \frac{pi^2}{4} - i\pi\ln(2) \) </div>
+        <div> \( Li_3(\frac{1}{3}) = \frac{1}{6}(\ln(2))^3 - \frac{\pi^2}{12}\ln(2) + \frac{7}{8} \zeta(3) \) </div>
+      </div>
+    </div>
   </section>
     
   <section id="Others" style="margin-top:1rem" class="sample wrap">
